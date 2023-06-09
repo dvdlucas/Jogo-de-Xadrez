@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace tabuleiro { 
+﻿namespace tabuleiro { 
 class Peca{
 
 		public Posicao posicao { get; set; }
@@ -15,7 +13,7 @@ class Peca{
 			this.cor = cor;
 			this.qteMovimento = 0;
 		}
-
+		
 
 
 
