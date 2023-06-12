@@ -8,17 +8,25 @@ using xadrez;
 
         try
         {
-            Tabuleiro tab = new Tabuleiro(8, 8);
-
-            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1, 3));
-            tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(1, 0));
-
-            tab.colocarPeca(new Torre(tab, Cor.Branca), new Posicao(3, 5));
-        
+            PartidaXadrez partida = new PartidaXadrez();
+         
 
 
-            Tela.imprimirTabuleiro(tab);
+           
+            while (!partida.terminada)
+            {
+                Console.WriteLine();
+                Console.Clear();
+                Tela.imprimirTabuleiro(partida.tab);
+                Console.Write("Digite a origem da peça : ");
+                Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
+                Console.Write("Digite o destino da peça : ");
+                Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
+
+                partida.executaMovimento(origem, destino);
+
+            }
+
 
         }
         catch (TabuleiroExceptions e)

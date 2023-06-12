@@ -14,7 +14,10 @@ class Peca{
 			this.qteMovimento = 0;
 		}
 		
-
+		public void incrementarqteMovimentos()
+		{
+			qteMovimento++;
+		}
 
 
 
