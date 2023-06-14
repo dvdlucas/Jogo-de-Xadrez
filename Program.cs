@@ -44,6 +44,8 @@ using xadrez;
                 }
             }
 
+            Console.Clear();
+            Tela.imprimirPartida(partida);
 
         }
         catch (TabuleiroExceptions e)
